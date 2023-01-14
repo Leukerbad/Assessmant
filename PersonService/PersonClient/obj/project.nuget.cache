@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "TK+9Khm9muagjJbPRz6fEycgOq3HWU79eYckVHVP9gtmSp6m3CtrwPVM+dnMwJW+W9dCne5VRq35r44ejfezpA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Daniel Tönnies\\Desktop\\Assessment\\PersonService\\PersonClient\\PersonClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Daniel Tönnies\\.nuget\\packages\\materialdesigncolors\\2.1.0\\materialdesigncolors.2.1.0.nupkg.sha512",
+    "C:\\Users\\Daniel Tönnies\\.nuget\\packages\\materialdesignthemes\\4.7.0\\materialdesignthemes.4.7.0.nupkg.sha512",
+    "C:\\Users\\Daniel Tönnies\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
+  "logs": []
+}

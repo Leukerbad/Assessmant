@@ -10,9 +10,6 @@
         {
             People = LoadPeople();
             header = GetHeader();
-            //CreatePerson(new Person("test", "test", "test", "test", "test", "True", "test", "test"));
-            //DeletePerson(GetPersonById("test"));
-            //UpdatePerson("test", new Person("test123", "test123", "tes123t", "tes123t", "test123", "True", "test", "test"));
         }
 
         private List<Person> LoadPeople()
