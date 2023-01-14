@@ -17,37 +17,68 @@ namespace PersonService.Controllers
 
         // GET: api/<PersonController>
         [HttpGet]
-        public IEnumerable<Person> Get()
+        public async Task<IActionResult> Get()
         {
-            return context.People;
+            return Ok(context.People);
         }
 
         // GET api/<PersonController>/5
         [HttpGet("{id}")]
-        public Person Get(string id)
+        public async Task<IActionResult> Get(string id)
         {
-            return context.GetPersonById(id);
+            try
+            {
+                return Ok(context.GetPersonById(id));
+            }
+            catch (Exception)
+            {
+                return NotFound();
+            }
         }
 
         // POST api/<PersonController>
         [HttpPost]
-        public void Post([FromBody] Person person)
+        public async Task<IActionResult> Post([FromBody] Person person)
         {
-            context.CreatePerson(person);
+            try
+            {
+                context.CreatePerson(person);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
         }
 
         // PUT api/<PersonController>/5
         [HttpPut("{id}")]
-        public void Put(string id, [FromBody] Person person)
+        public async Task<IActionResult> Put(string id, [FromBody] Person person)
         {
-            context.UpdatePerson(id, person);
+            try
+            {
+                context.UpdatePerson(id, person);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
         }
 
         // DELETE api/<PersonController>/5
         [HttpDelete("{id}")]
-        public void Delete(string id)
+        public async Task<IActionResult> Delete(string id)
         {
-            context.DeletePerson(context.GetPersonById(id));
+            try
+            {
+                context.DeletePerson(context.GetPersonById(id));
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return NotFound();
+            }
         }
     }
 }

@@ -1,10 +1,5 @@
 id;firstname;lastname;email;gender;active;username;notes
-eerdf223;daniel;tönnies;daniel@tönnies.com;male;True;dt;asdn asdasd asdas
-eerdf223;daniel;tönnies;daniel@tönnies.com;male;True;dt;asdn asdasd asdas
-eerdf223;daniel;tönnies;daniel@tönnies.com;male;True;dt;asdn asdasd asdas
-eerdf223;daniel;tönnies;daniel@tönnies.com;male;True;dt;asdn asdasd asdas
-eerdf223;daniel;tönnies;daniel@tönnies.com;male;True;dt;asdn asdasd asdas
-eerdf223;daniel;tönnies;daniel@tönnies.com;male;True;dt;asdn asdasd asdas
-222;asdasdasdsda;string;string;string;True;string;string
-jule;sda;qsd;asd;23;True;234234;23423
-213;2we;sda;asdf;fsda;False;213123;12312
+x112;Obi-Wan;Kenobi;obi@highground.com;male;True;kenobiwan;
+12et;Anakin;Skywalker;nosand@tatooine.ch;male;True;SkyGuy;The chosen one
+98h2;Qui-Gon;Jin;quigon@jeditemple.cs;male;False;prophecies;inactive since Naboo
+kls1;Ashoka;Tano;at@jeditemple.cs;female;True;ashoka@padawan.com;

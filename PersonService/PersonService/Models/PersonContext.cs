@@ -1,4 +1,6 @@
-﻿namespace PersonService.Models
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace PersonService.Models
 {
     public class PersonContext
     {
