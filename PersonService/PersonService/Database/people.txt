@@ -2,4 +2,4 @@ id;firstname;lastname;email;gender;active;username;notes
 x112;Obi-Wan;Kenobi;obi@highground.com;male;True;kenobiwan;
 12et;Anakin;Skywalker;nosand@tatooine.ch;male;True;SkyGuy;The chosen one
 98h2;Qui-Gon;Jin;quigon@jeditemple.cs;male;False;prophecies;inactive since Naboo
-kls1;Ashoka;Tano;at@jeditemple.cs;female;True;ashoka@padawan.com;
+kls1;Ashoka;Tano;at@jeditemple.cs;female;True;ashoka@padawan1.com;

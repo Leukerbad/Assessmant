@@ -76,16 +76,23 @@ namespace PersonClient
 
         private async void SavePerson(Person person)
         {
-            HttpResponseMessage response = await client.GetAsync("/api/Person/" + person.Id);
-            if (response.IsSuccessStatusCode)
+            try
             {
-                response = await client.PutAsJsonAsync("/api/Person/" + person.Id, person);
+                HttpResponseMessage response = await client.GetAsync("/api/Person/" + person.Id);
+                if (response.IsSuccessStatusCode)
+                {
+                    response = await client.PutAsJsonAsync("/api/Person/" + person.Id, person);
+                }
+                else if (response.StatusCode == HttpStatusCode.NotFound)
+                {
+                    response = await client.PostAsJsonAsync("/api/Person", person);
+                }
+                LoadGrid();
             }
-            else if(response.StatusCode == HttpStatusCode.NotFound)
+            catch (Exception)
             {
-                response = await client.PostAsJsonAsync("/api/Person", person);
+
             }
-            LoadGrid();
         }
 
         private void btn_clear_Click(object sender, RoutedEventArgs e)
@@ -124,12 +131,24 @@ namespace PersonClient
 
         private async void DeletePerson(string id)
         {
-            HttpResponseMessage response = await client.DeleteAsync("/api/Person/" + id);
-
-            if (response.IsSuccessStatusCode)
+            try
             {
-                LoadGrid();
+                HttpResponseMessage response = await client.DeleteAsync("/api/Person/" + id);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    LoadGrid();
+                }
             }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void tb_filter_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            dg_pe.ItemsSource = _people.Where(p => p.ToString().ToUpper().Contains(tb_filter.Text.ToUpper()));
         }
     }
 }

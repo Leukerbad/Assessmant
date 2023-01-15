@@ -23,6 +23,13 @@
             <Label Content="Person - Overview"
                HorizontalAlignment="Center"
                VerticalAlignment="Center"/>
+            <TextBox x:Name="tb_filter"
+                     TextChanged="tb_filter_TextChanged"
+                     Margin="0 5 600 5"
+                     VerticalAlignment="Bottom"/>
+            <Label Content="Filter"
+                       Margin="200 5 400 5"
+                   VerticalAlignment="Bottom"/>
             <Label Content="Person - Detail" 
                Grid.Column="2"
                HorizontalAlignment="Center"
@@ -33,7 +40,7 @@
                       IsReadOnly="True"
                       SelectionChanged="dg_pe_SelectionChanged"
                       IsSynchronizedWithCurrentItem="True"/>
-            <Grid Grid.Row="2" Grid.Column="2">
+                <Grid Grid.Row="2" Grid.Column="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width="*"/>
